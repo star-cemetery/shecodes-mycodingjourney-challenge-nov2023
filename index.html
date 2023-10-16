@@ -22,9 +22,9 @@
       --background-secondary-color: rgb(174, 169, 169);
       --background-tertiary-color: rgb(98, 91, 91);
       --highlight-primary-color: #ffc6ac;
-      --highlight-secondary-color: rgb(255, 255, 200);
+      --highlight-secondary-color: rgb(145, 198, 164);
       --basic-font: "RhythemSignatureFont";
-      --highlight-font:  "FancyTextFont"
+      --highlight-font: "FancyTextFont";
     }
     .emoji {
       width: 50px;
@@ -32,41 +32,57 @@
     }
     a {
       text-decoration: none;
+      color: black;
     }
-    body {
-      @font-face {
-        font-family: "FancyTextFont";
-        src: url("fonts/FancyText/Fancytext.eot"); /* IE9 Compat Modes */
-        src: url("fonts/FancyText/Fancytext.eot?#iefix")
-            format("embedded-opentype"),
-          /* IE6-IE8 */ url("fonts/FancyText/Fancytext.woff2") format("woff2"),
-          /* Super Modern Browsers */ url("fonts/FancyText/Fancytext.woff")
-            format("woff"),
-          /* Pretty Modern Browsers */ url("fonts/FancyText/Fancytext.ttf")
-            format("truetype");
-        /* Safari, Android, iOS */ url("fonts/FancyText/Fancytext.svg#svgFontName") format("svg"); /* Legacy iOS */
-      }
+    a:hover {
+      transition: 0.8s;
+      color: var(--highlight-secondary-color);
     }
-    p {
-      @font-face {
-        font-family: "RhythemSignatureFont";
-        src: url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470743/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_cbhik1.eot"); /* IE9 Compat Modes */
-        src: url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470743/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_cbhik1.eot?#iefix")
-            format("embedded-opentype"),
-          /* IE6-IE8 */
-            url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470745/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_juhpb7.woff2")
-            format("woff2"),
-          /* Super Modern Browsers */
-            url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470745/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_zpsrgc.woff")
-            format("woff"),
-          /* Pretty Modern Browsers */
-            url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697363785/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_kocl8f.ttf")
-            format("truetype");
-        /* Safari, Android, iOS */ /*url("webfont.svg#svgFontName") format("svg"); /* Legacy iOS */
-      }
+    @font-face {
+      font-family: "FancyText";
+      src: url("fonts/FancyText/Fancytext.eot");
+      src: url("fonts/FancyText/Fancytext.eot?#iefix")
+          format("embedded-opentype"),
+        url("fonts/FancyText/Fancytext.woff2") format("woff2"),
+        url("fonts/FancyText/Fancytext.woff") format("woff"),
+        url("fonts/FancyText/Fancytext.ttf") format("truetype"),
+        url("fonts/FancyText/Fancytext.svg") format("svg");
+    }
+    @font-face {
+      font-family: "RhythemSignature";
+      src: url("fonts/RhythemSignature/RhythemSignature.eot");
+      src: url("fonts/RhythemSignature/RhythemSignature.eot?")
+          format("embedded-opentype"),
+        url("fonts/RhythemSignature/RhythemSignature.woff2") format("woff2"),
+        url("fonts/RhythemSignature/RhythemSignature.woff") format("woff"),
+        url("fonts/RhythemSignature/RhythemSignature.ttf") format("truetype"),
+        url("fonts/RhythemSignature/RhythemSignature.svg") format("svg");
     }
     .quote {
       text-align: end;
+    }
+    body {
+      font-family: "FancyText";
+      font-size: 42px;
+      background-color: rgb(250, 239, 225);
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 54px;
+    }
+    section,
+    h2 {
+      margin: 15px;
+    }
+    h2:hover,
+    .nav-link:hover {
+      color: var(--highlight-primary-color);
+      transition: 0.8s;
+    }
+    .disclaimer:hover {
+      color: var(--highlight-primary-color);
+      transition: 0.8s;
     }
   </style>
   <body>
@@ -120,21 +136,22 @@
       autoplay
       controls
     ></audio>
-    <p>
+    <p class="disclaimer">
       Music by the wonderful
       <a href="https://www.youtube.com/watch?v=xk3BvNLeNgw"
-        >&copy;&quot;Hang Massive</a
+        >(c)&quot;Hang Massive - Once Again - 2011&quot;</a
       >
-      - Once Again - 2011&quot;
     </p>
     <section class="initial-inspiration">
       <article>
         <h2>My initial inspiration source</h2>
         <p class="quote">
           &quot;When a programmer is coding, he is in a state of superposition –
+          <br />
           he is Divine and has no slightest idea of what he is doing
-          (&copy;bash.org)&quot;
+          ((c)bash.org)&quot;
         </p>
+        <br />
         <p>
           Pavel Durov – first philological degree, then being involved in
           programming. Uniting non-drinking alcohol, vegetarianism, values of
@@ -168,5 +185,9 @@
         <p></p>
       </article>
     </section>
+    <footer>
+      Made by <a href="https://github.com/star-cemetery">Nio Ar</a> in October
+      2023
+    </footer>
   </body>
 </html>
