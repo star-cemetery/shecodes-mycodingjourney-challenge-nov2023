@@ -21,14 +21,63 @@
       --background-primary-color: black;
       --background-secondary-color: rgb(174, 169, 169);
       --background-tertiary-color: rgb(98, 91, 91);
-      --highlight-primary-color: #ffb187;
+      --highlight-primary-color: #ffc6ac;
       --highlight-secondary-color: rgb(255, 255, 200);
+      --basic-font: "RhythemSignatureFont";
+      --highlight-font:  "FancyTextFont"
+    }
+    .emoji {
+      width: 50px;
+      height: 50px;
+    }
+    a {
+      text-decoration: none;
+    }
+    body {
+      @font-face {
+        font-family: "FancyTextFont";
+        src: url("fonts/FancyText/Fancytext.eot"); /* IE9 Compat Modes */
+        src: url("fonts/FancyText/Fancytext.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */ url("fonts/FancyText/Fancytext.woff2") format("woff2"),
+          /* Super Modern Browsers */ url("fonts/FancyText/Fancytext.woff")
+            format("woff"),
+          /* Pretty Modern Browsers */ url("fonts/FancyText/Fancytext.ttf")
+            format("truetype");
+        /* Safari, Android, iOS */ url("fonts/FancyText/Fancytext.svg#svgFontName") format("svg"); /* Legacy iOS */
+      }
+    }
+    p {
+      @font-face {
+        font-family: "RhythemSignatureFont";
+        src: url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470743/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_cbhik1.eot"); /* IE9 Compat Modes */
+        src: url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470743/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_cbhik1.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */
+            url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470745/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_juhpb7.woff2")
+            format("woff2"),
+          /* Super Modern Browsers */
+            url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697470745/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_zpsrgc.woff")
+            format("woff"),
+          /* Pretty Modern Browsers */
+            url("https://res.cloudinary.com/dwfyuummv/raw/upload/v1697363785/shecodes%20challenge%20nov2023-my%20coding%20journey/font/RhythemSignature/RhythemSignature-GO8vg_kocl8f.ttf")
+            format("truetype");
+        /* Safari, Android, iOS */ /*url("webfont.svg#svgFontName") format("svg"); /* Legacy iOS */
+      }
+    }
+    .quote {
+      text-align: end;
     }
   </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"
+          ><img
+            class="emoji"
+            src="https://res.cloudinary.com/dwfyuummv/image/upload/v1697469475/shecodes%20challenge%20nov2023-my%20coding%20journey/emoji/apple-lotus-emoji_w90n6m.png"
+            alt="apple lotus emoji"
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,16 +92,20 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" id="home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" id="initial-inspiration"
+                >My initial inspiration source</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" id="coder-journey">My journey as a coder</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" id="further-inspiration"
+                >Further inspiration
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -61,5 +114,59 @@
         </div>
       </div>
     </nav>
+    <audio
+      src="https://res.cloudinary.com/dwfyuummv/video/upload/v1697469167/shecodes%20challenge%20nov2023-my%20coding%20journey/music/Hang_Massive_Once_Again_2011_hang_drum_duo_HD_mgwxyh.mp3"
+      loop
+      autoplay
+      controls
+    ></audio>
+    <p>
+      Music by the wonderful
+      <a href="https://www.youtube.com/watch?v=xk3BvNLeNgw"
+        >&copy;&quot;Hang Massive</a
+      >
+      - Once Again - 2011&quot;
+    </p>
+    <section class="initial-inspiration">
+      <article>
+        <h2>My initial inspiration source</h2>
+        <p class="quote">
+          &quot;When a programmer is coding, he is in a state of superposition –
+          he is Divine and has no slightest idea of what he is doing
+          (&copy;bash.org)&quot;
+        </p>
+        <p>
+          Pavel Durov – first philological degree, then being involved in
+          programming. Uniting non-drinking alcohol, vegetarianism, values of
+          non-disclosing the users’ data at the regime’s request. Having a
+          Master of Arts degree and a degree in engineering. Being smart,
+          efficient, and upper-class due to own merits and work. Having values,
+          consistency, and finance for further development.
+        </p>
+      </article>
+    </section>
+    <section class="coder-journey">
+      <article>
+        <h2>My journey as a coder</h2>
+        <p>
+          Birdling/crow/eagle <br />Birdling – the first thing I see in
+          programming I consider my mom and follow it everywhere. No critical
+          thinking and analysing to be found yet. Eagle – while soaring see all
+          the picture in the whole and the slightest details, the patterns, and
+          the digression from these patterns. Relentlessly destroying errors and
+          improving the project until it is perfect – follows all the
+          specifications and there is nothing to add or delete from there. A
+          pure perfection. <br />These days I am like a crow – all the
+          sparkling, pretty and funny things are being taken into my nest and
+          thoroughly analysed. But only the ones I like and appreciate.
+        </p>
+      </article>
+    </section>
+    <section class="further-inspiration">
+      <article>
+        <h2>Further inspiration</h2>
+        <p></p>
+      </article>
+    </section>
   </body>
 </html>
